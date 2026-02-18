@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logger from "../utils/logger";
 
 const usePasswordGenerator = () => {
     const [password, setPassword] = useState("");
@@ -9,10 +10,13 @@ const usePasswordGenerator = () => {
         const selectedCheckbox = checkboxData.filter(checkbox => checkbox.status);
 
         if (selectedCheckbox.length === 0) {
+            logger.warn("Password generation failed: No options selected");
             setErrorMessage("Please select atleast one option");
             setPassword("");
             return;
         }
+
+        logger.debug("Generating password with options:", { selectedOptions: selectedCheckbox.map(c => c.title), length });
 
         selectedCheckbox.forEach(check => {
             switch (check.title) {
@@ -38,6 +42,7 @@ const usePasswordGenerator = () => {
 
         setPassword(generatePassword);
         setErrorMessage("");
+        logger.info("Password generated successfully", { length: generatePassword.length });
     };
 
     return {
