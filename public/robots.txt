@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://password-manager-pi-rosy.vercel.app/sitemap.xml
+Sitemap: https://passgen-tools.vercel.app/sitemap.xml
