@@ -12,7 +12,7 @@ const APPS = [
   {
     title: 'Task Manager',
     description: 'Plan your day with a clean task board for creating, tracking, and completing daily to-dos.',
-    url: 'https://todo-phi-neon-51.vercel.app/',
+    url: 'https://taskmint-tools.vercel.app/',
     tag: 'Productivity',
     icon: <ClipboardList size={22} className="text-blue-400" />
   },
