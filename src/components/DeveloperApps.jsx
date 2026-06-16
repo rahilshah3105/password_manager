@@ -1,4 +1,5 @@
 import { ExternalLink, ClipboardList, Type, KeyRound, Newspaper, Code, Users } from 'lucide-react';
+import { FaChrome } from 'react-icons/fa';
 import './ToolPage.css';
 
 const APPS = [
@@ -15,13 +16,6 @@ const APPS = [
     url: 'https://instautility.netlify.app/',
     tag: 'Social',
     icon: <Users size={22} className="text-pink-400" />
-  },
-  {
-    title: 'Password Manager',
-    description: 'Generate secure passwords and manage them in a local vault with simple import/export support.',
-    url: 'https://passgen-tools.vercel.app/',
-    tag: 'Security',
-    icon: <KeyRound size={22} className="text-emerald-400" />
   },
   {
     title: 'Word Utils',
@@ -43,6 +37,13 @@ const APPS = [
     url: 'https://getyournewspulse.netlify.app/',
     tag: 'Information',
     icon: <Newspaper size={22} className="text-amber-400" />
+  },
+  {
+    title: 'Chrome Extension',
+    description: 'Access all your favorite developer, social, and security utilities instantly from your browser toolbar.',
+    url: 'https://github.com/rahilshah3105',
+    tag: 'Extension',
+    icon: <FaChrome size={22} className="text-orange-400" />
   },
 ];
 

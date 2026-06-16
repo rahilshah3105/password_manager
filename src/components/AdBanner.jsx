@@ -42,6 +42,7 @@ export default function AdBanner({ position = 'top', darkMode = false, className
       iframe.scrolling = 'no';
       iframe.style.border = 'none';
       iframe.style.overflow = 'hidden';
+      iframe.style.maxWidth = '100%';
 
       containerRef.current.appendChild(iframe);
 
@@ -78,10 +79,11 @@ export default function AdBanner({ position = 'top', darkMode = false, className
         alignItems: 'center', 
         width: '100%', 
         minHeight: position === 'top' ? '50px' : '90px',
-        margin: '1rem auto' 
+        margin: '1rem auto',
+        overflow: 'hidden'
       }}
     >
-      <div ref={containerRef} style={{ display: 'flex', justifyContent: 'center', width: '100%' }} />
+      <div ref={containerRef} style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '100%' }} />
     </div>
   );
 }
